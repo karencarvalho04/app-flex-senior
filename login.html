@@ -5,16 +5,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FlexSênior - Login</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 400px; /* Limita a largura máxima em telas maiores */
+            padding: 20px;
+            margin: 0 auto; /* Centraliza horizontalmente */
+        }
+
+        h1 {
+            font-size: 2rem; /* Ajusta o tamanho do título para dispositivos menores */
+        }
+
+        .form-group {
+            margin-bottom: 15px; /* Espaçamento entre os campos */
+        }
+
+        input {
+            width: 100%; /* Faz com que as caixas ocupem toda a largura do container */
+            height: 50px;
+            font-size: 1.2rem;
+            padding: 10px; /* Adiciona espaço interno para melhor usabilidade */
+            box-sizing: border-box; /* Inclui bordas no cálculo do tamanho total */
+        }
+
+        .primary-btn {
+            width: 100%; /* Ajusta o botão para ocupar toda a largura */
+            height: 50px;
+            font-size: 1.2rem;
+        }
+
+        p {
+            font-size: 1rem; /* Fonte ajustável para dispositivos menores */
+        }
+
+        a {
+            text-decoration: none;
+            color: #28a745; /* Mantém o esquema de cores do aplicativo */
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8rem; /* Reduz título em telas menores */
+            }
+
+            input, .primary-btn {
+                font-size: 1rem; /* Reduz tamanho do texto para dispositivos menores */
+                height: 45px; /* Ajusta altura */
+            }
+
+            p {
+                font-size: 0.9rem; /* Ajusta o texto para telas pequenas */
+            }
+        }
+    </style>
 </head>
-<body class="login">
-    <div class="container">
-        <h1>Faça Login</h1>
-        <form>
-            <input type="text" placeholder="E-mail" required>
-            <input type="password" placeholder="Senha" required>
-            <button class="primary-btn">Entrar</button>
-        </form>
-        <p>Não possui conta? <a href="#">Cadastre-se</a></p>
+<body class="bg-light login">
+    <div class="container my-5">
+        <h1 class="text-success text-center mb-4">Faça Login</h1>
+        <div class="text-center">
+            <form>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="E-mail" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" placeholder="Senha" required>
+                </div>
+                <button class="btn btn-custom-green btn-lg w-100 primary-btn">Entrar</button>
+            </form>
+            <p class="text-muted mt-3">Não possui conta? <a href="#">Cadastre-se</a></p>
+        </div>
+        <div class="text-center mt-5">
+            <a href="index.html" class="btn btn-custom-green btn-lg">Voltar</a>
+        </div>
     </div>
 </body>
 </html>
